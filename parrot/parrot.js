@@ -151,12 +151,29 @@ function Parrot() {
                     There are 5 options listed on the card. Each player, including the judge, must write one of those answers down. All players who match the judge's answer receive 1 point.
                   </RuleType>
                 </div>
+
+                              {/* Game Contents - placed directly under the rules */}
+              <div className="w-full flex justify-center mt-10">
+                <div className="w-full max-w-3xl">
+                  <h2 className="text-xl font-medium mb-3 text-blue-500">Game Contents</h2>
+                    <ul className="text-sm list-disc pl-6">
+                      <li>225 Prompt cards (45 of each type)</li>
+                      <li>8 Small whiteboards</li>
+                      <li>8 Dry-erase markers</li>
+                      <li>1 Rule sheet / quick reference</li>
+                      <li>Optional bonus prompt pack</li>
+                    </ul>
+                </div>
+              </div>
               </div>
             </div>
 
                 {/* Bottom (flexible) row */}
             <div className="pt-4">
               <hr className="border-border" />
+
+
+
               <div className="mt-4 text-sm text-muted-foreground">
                 <h1 className="text-2xl font-medium mb-5 text-blue-500">Game Images</h1>
                 </div>
@@ -165,7 +182,7 @@ function Parrot() {
 
               <div className="w-full">
                 <div className="w-full flex flex-col items-center gap-3">
-                  <figure className="w-full max-w-3xl">
+                  <figure className="w-full max-w-3xl mb-4">
                     <figcaption className="text-center text-lg font-medium mb-2">Total Game</figcaption>
                     <div
                       className="w-full flex items-center justify-center bg-gray-50 rounded-md border border-border p-4 cursor-pointer"

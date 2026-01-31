@@ -17,7 +17,7 @@ function Home() {
                 <div className="md:col-span-2">
                   <h1 className="text-3xl font-semibold mb-6">Welcome</h1>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    The home page for all things by Marmot Games. Check out some of the things I am working on.
+                    The home page for all things Marmot Games. Check out some of the things I am working on.
                     From developing my own games to my opinion about the most recent Magic the Gathering draft 
                     format, everything Marmot Games related will be posted here.
                   </p>
