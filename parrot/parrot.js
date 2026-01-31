@@ -27,40 +27,81 @@ function Parrot() {
               <div className="h-full grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
                 <div className="md:col-span-2">
                   <h1 className="text-3xl font-semibold mb-6 text-blue-500">Drawing Parrots</h1>
-                  <h3 className="text-xl font-medium mb-5 text-blue-500">A game about drawing parrots ... and other things</h3>
+                  <h3 className="text-xl font-medium mb-5 text-red-400">A game about drawing parrots ... and other things</h3>
 
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    If you are looking for a new party game to play with friends, Drawing Parrots is a simple concept
-                    with a lot of room for creativity and fun. Players take turns judging each other's responses to various prompts.
-                    The game contains 5 types of prompts which can be easily sorted through so that your prompts fit your group dynamic.
+                    Drawing Parrots is a party game where one player judges the responses of other players based on how well they match a given prompt. 
+                    There are 5 prompt categories with prompts ranging from drawing the coolest parrot to which player would make the best storybook 
+                    villain. The game is designed around allowing players to get creative with their answers using whiteboards and markers.
                     The complete ruleset for the game is below. Check it out and see if it sounds good to you.
                   </p>
 
-                  <div className="mt-6 flex items-center justify-center gap-4">
-                    <p className="text-sm text-muted-foreground mr-20">
-                      Contact: <a href="mailto:cardmarmot37@gmail.com" className="underline underline-offset-2">cardmarmot37@gmail.com</a>
+              <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                <div className="md:col-span-1">
+                  <div className="w-full flex justify-center mt-10">
+                    <div className="w-full max-w-3xl">
+                      <h2 className="text-xl font-medium mb-3 text-red-400">Game Contents</h2>
+                        <ul className="text-md list-disc pl-6">
+                          <li>225 Prompt cards (45 of each type)</li>
+                          <li>8 Small whiteboards</li>
+                          <li>8 Dry-erase markers</li>
+                          <li>1 Rules sheet </li>
+                        </ul>
+                    </div>
+                  </div>
 
-                    </p>
  
-                    <a
-                      href="/game"
-                      className="inline-flex items-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600"
-                      role="button"
-                    >
-                      Try It (Coming Soon)
-                    </a>
+
+                  </div>
+
+              <div className="md:col-span-1">
+                    <div className="w-full flex justify-center mt-10">
+                    <div className="w-full max-w-3xl">
+                      <h2 className="text-xl font-medium mb-3 text-red-400">Game Details</h2>
+                        <ul className="text-md list-disc pl-6">
+                          <li>3-8 players</li>
+                          <li>~45 minutes (depending on # players)</li>
+                          <li>Ages 10+ recommended</li>
+                          <li>Party game</li>
+                        </ul>
+                    </div>
                   </div>
                 </div>
 
+                </div>
+                </div>
+
                 <div className="md:col-span-1 flex items-center justify-center flex-col">
+                                      <p className="text-sm text-muted-foreground text-center mb-6">
+                      Contact: <a href="mailto:cardmarmot37@gmail.com" className="underline underline-offset-2">cardmarmot37@gmail.com</a>
+                    </p>
                   <Image
                     src={parrotDemo}
                     alt="Parrot"
                     width={220}
                     height={220}
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="rounded-md object-cover w-full max-w-[220px]"
+                    className="rounded-md object-cover w-full max-w-[220px] mb-2"
                   />
+                  <div className="mt-4 flex flex-col items-center gap-3">
+
+
+                    <a
+                      href="/game"
+                      className="inline-flex items-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 mb-2"
+                      role="button"
+                    >
+                      Try It (Coming Soon)
+                    </a>
+
+                     <a
+                      href="/order"
+                      className="inline-flex items-center rounded-md bg-red-400 px-4 py-2 text-sm font-medium text-white hover:bg-red-600"
+                    >
+                      Order
+                    </a>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -72,11 +113,21 @@ function Parrot() {
                 <h1 className="text-2xl font-medium mb-5 text-blue-500">Game Rules</h1>
 
                 <p className="mb-3">
-                  General: In this game, each player receives 1 whiteboard and 1 marker. The game begins with one player as the judge (chosen however you want). The judge takes a card from the stack and reads it to all players. Each card has a prompt for all players to respond to. In some cases, the judge must also respond to the prompt. After all players have something on their board, the judge reviews the responses and gives out points to players according to the criteria below. Then, the player to the judge's left becomes the judge for the next round. This continues until one player reaches 11 points (or whatever number the group wants to play to).
+                  In this game, each player receives 1 whiteboard and 1 marker. The game begins with one player as the judge 
+                  (chosen however you want). The judge takes a card from the stack and reads it to all players. Each card has a 
+                  prompt for all players to respond to. In some cases, the judge must also respond to the prompt. After all 
+                  players have something on their board, the judge reviews the responses and gives out points to players 
+                  according to the criteria below. Then, the player to the judge's left becomes the judge for the next round. 
+                  This continues until one player reaches 7 points (or whatever number the group wants to play to).
                 </p>
 
                 <p className="mb-4">
-                  There are 5 prompt varieties in the game. They are marked with symbols on their faces to distinguish them. This allows for prompts of a certain type to be added or removed from the overall deck more easily. Based on your group dynamic, you can customize the deck to include only the types of prompts you like. The rules for scoring the different prompt varieties are below. In the event of a tie, all tied players receive a point. Some prompts are intentionally ambiguous. There is no right way to interpret these, and the final points decision is made by the judge.
+                  There are 5 prompt varieties in the game. They are marked with symbols on their faces to distinguish them.
+                  This allows for prompts of a certain type to be added or removed from the overall deck more easily. 
+                  Based on your group dynamic, you can customize the deck to include only the types of prompts you like. The
+                   rules for scoring the different prompt varieties are below. In the event of a tie, all tied players receive 
+                   a point. Most prompts are intentionally ambiguous. There is no right way to interpret these, and the final 
+                   points decision is made by the judge.
                 </p>
 
                 <div className="space-y-5">
@@ -152,19 +203,7 @@ function Parrot() {
                   </RuleType>
                 </div>
 
-                              {/* Game Contents - placed directly under the rules */}
-              <div className="w-full flex justify-center mt-10">
-                <div className="w-full max-w-3xl">
-                  <h2 className="text-xl font-medium mb-3 text-blue-500">Game Contents</h2>
-                    <ul className="text-sm list-disc pl-6">
-                      <li>225 Prompt cards (45 of each type)</li>
-                      <li>8 Small whiteboards</li>
-                      <li>8 Dry-erase markers</li>
-                      <li>1 Rule sheet / quick reference</li>
-                      <li>Optional bonus prompt pack</li>
-                    </ul>
-                </div>
-              </div>
+
               </div>
             </div>
 
@@ -183,7 +222,7 @@ function Parrot() {
               <div className="w-full">
                 <div className="w-full flex flex-col items-center gap-3">
                   <figure className="w-full max-w-3xl mb-4">
-                    <figcaption className="text-center text-lg font-medium mb-2">Total Game</figcaption>
+                    <figcaption className="text-center text-lg font-medium mb-2 text-red-400">Total Game</figcaption>
                     <div
                       className="w-full flex items-center justify-center bg-gray-50 rounded-md border border-border p-4 cursor-pointer"
                       role="button"
@@ -204,7 +243,7 @@ function Parrot() {
                   </figure>
 
                   <figure className="w-full max-w-3xl">
-                    <figcaption className="text-center text-lg font-medium mb-2">5 Prompt Types</figcaption>
+                    <figcaption className="text-center text-lg font-medium mb-2 text-red-400">5 Prompt Types</figcaption>
                     <div
                       className="w-full flex items-center justify-center bg-gray-50 rounded-md border border-border p-4 cursor-pointer"
                       role="button"
