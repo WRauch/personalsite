@@ -37,8 +37,22 @@ function Parrot() {
                   </p>
 
               <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+
+              <div className="md:col-span-1">
+                    <div className="w-full flex justify-center mt-6">
+                    <div className="w-full max-w-3xl">
+                      <h2 className="text-xl font-medium mb-3 text-red-400">Game Details</h2>
+                        <ul className="text-md list-disc pl-6">
+                          <li>3-8 players</li>
+                          <li>~45 minutes (depending on # players)</li>
+                          <li>Ages 10+ recommended</li>
+                          <li>Party game</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
                 <div className="md:col-span-1">
-                  <div className="w-full flex justify-center mt-10">
+                  <div className="w-full flex justify-center mt-6">
                     <div className="w-full max-w-3xl">
                       <h2 className="text-xl font-medium mb-3 text-red-400">Game Contents</h2>
                         <ul className="text-md list-disc pl-6">
@@ -54,19 +68,6 @@ function Parrot() {
 
                   </div>
 
-              <div className="md:col-span-1">
-                    <div className="w-full flex justify-center mt-10">
-                    <div className="w-full max-w-3xl">
-                      <h2 className="text-xl font-medium mb-3 text-red-400">Game Details</h2>
-                        <ul className="text-md list-disc pl-6">
-                          <li>3-8 players</li>
-                          <li>~45 minutes (depending on # players)</li>
-                          <li>Ages 10+ recommended</li>
-                          <li>Party game</li>
-                        </ul>
-                    </div>
-                  </div>
-                </div>
 
                 </div>
                 </div>
@@ -95,10 +96,10 @@ function Parrot() {
                     </a>
 
                      <a
-                      href="/order"
+                      href="/parrot/order"
                       className="inline-flex items-center rounded-md bg-red-400 px-4 py-2 text-sm font-medium text-white hover:bg-red-600"
                     >
-                      Order
+                      Order (Coming Soon)
                     </a>
                   </div>
 

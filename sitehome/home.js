@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import placeholder from '../images/Profile.jpg';
+import placeholder from '../images/gametotal.jpg';
 import marmot from '../images/marmot.jpg';
-
+import m11bolt from '../images/m11bolt.jpg';
 function Home() {
 
   return (
@@ -17,9 +17,9 @@ function Home() {
                 <div className="md:col-span-2">
                   <h1 className="text-3xl font-semibold mb-6">Welcome</h1>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    The home page for all things Marmot Games. Check out some of the things I am working on.
+                    Check out some of the things I am working on.
                     From developing my own games to my opinion about the most recent Magic the Gathering draft 
-                    format, everything Marmot Games related will be posted here.
+                    format, everything I am interested in sharing will be posted here.
                   </p>
                 </div>
 
@@ -61,10 +61,10 @@ function Home() {
                     <Image
                       src={placeholder}
                       alt="Drawing Parrots placeholder"
-                      width={220}
-                      height={220}
+                      width={320}
+                      height={200}
                       sizes="(max-width: 768px) 100vw, 25vw"
-                      className="rounded-md object-cover w-full max-w-[160px]"
+                      className="rounded-md object-cover w-full max-w-[320px] border-4 border-red-400"
                     />
                   </div>
                 </div>
@@ -76,7 +76,7 @@ function Home() {
               <hr className="border-border" />
               <div className="mt-6 h-full grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
                 <div className="md:col-span-2 text-lg text-muted-foreground">
-                  <h2 className="text-2xl font-medium mb-5 text-orange-500">Magic</h2>
+                  <h2 className="text-2xl font-medium mb-5 text-red-400">Magic</h2>
                   <p className="text-lg leading-relaxed mb-3">
                     I am an avid Magic player and enjoy discussing limited formats. 
                     Generally I focus on draft, and I like to analyze data from <a href='https://17lands.com/card_data' className="underline underline-offset-2">17Lands.com</a> 
@@ -89,12 +89,12 @@ function Home() {
 
                 <div className="md:col-span-1 flex items-start justify-center">
                   <Image
-                    src={marmot}
+                    src={m11bolt}
                     alt="Marmot"
                     width={220}
                     height={220}
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="rounded-md object-cover w-full max-w-[220px]"
+                    className="rounded-md object-cover w-full max-w-[220px] border-8 border-black"
                   />
                 </div>
               </div>

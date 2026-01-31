@@ -7,6 +7,7 @@ import Navigation from '@/generalcomp/navbar';
 import Canvas from '@/parrot/canvas.js';
 import Gameplay from '@/parrot/gameplay';
 import Parrot from '@/parrot/parrot';
+import Orders from '@/parrot/orders';
 import Home from '@/sitehome/home';
 import About from '@/about/about';
 import Testing from '@/parrot/testing';
@@ -20,8 +21,9 @@ export default function AppClient() {
         <main className="mx-auto w-full max-w-6xl px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/parrot" element={<Parrot />} />
+            <Route path="/parrot/order" element={<Orders />} />
             <Route path="/game" element={<Canvas />} />
             <Route path="/testing" element={<Testing />} />
           </Routes>

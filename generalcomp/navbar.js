@@ -6,9 +6,10 @@ import { Bird, Home, Info } from 'lucide-react';
 
 const navItems = [
   { to: '/', label: 'Home', Icon: Home },
-  { to: '/about', label: 'About', Icon: Info },
   { to: '/parrot', label: 'Parrot', Icon: Bird },
-  { to: '/testing', label: 'Testing', Icon: Info },
+    // { to: '/about', label: 'About', Icon: Info },
+
+  // { to: '/testing', label: 'Testing', Icon: Info },
 
 ];
 
@@ -23,7 +24,7 @@ export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-4 px-4">
-        <Link to="/" className="font-semibold tracking-tight text-lg">CardMarmot</Link>
+        {/* <Link to="/" className="font-semibold tracking-tight text-lg">CardMarmot</Link> */}
 
         <nav className="flex items-center gap-1">
           {navItems.map(({ to, label, Icon }) => {
@@ -46,14 +47,14 @@ export default function Navigation() {
           })}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2">
+        {/* <div className="ml-auto flex items-center gap-2">
           <Link
             to="/game"
             className="inline-flex items-center rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:opacity-90"
           >
             Game
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );

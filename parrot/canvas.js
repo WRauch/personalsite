@@ -37,98 +37,94 @@ export default function Canvas() {
     setEraserWidth(e.target.value);
   };
 
-   //Using Shadcn UI
+  // Keep functionality exactly the same — only tweak visual layout
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 w-full p-6 flex justify-center">
-      <Card className="w-full max-w-xl">
+    <div className="parrot-canvas w-full">
+      <Card className="w-full">
+        <CardContent className="p-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="md:col-span-1">
+              <h2 className="text-2xl font-semibold mb-4">Tools</h2>
 
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm mb-1">Stroke color</label>
+                  <input type="color" value={strokeColor} onChange={handleStrokeColorChange} />
+                </div>
 
-      <CardContent>
-      <h1 className="flex items-center gap-6">Tools</h1>
-      <div className="flex flex-row items-center justify-center">
-        <div className="px-5">
+                <div>
+                  <label className="block text-sm mb-1">Canvas color</label>
+                  <input type="color" value={canvasColor} onChange={handleCanvasColorChange} />
+                </div>
 
-        <label htmlFor="color">Stroke color</label>
-        <input
-          type="color"
-          value={strokeColor}
-          onChange={handleStrokeColorChange}
-        />
+                <div>
+                  <button
+                    type="button"
+                    onClick={toggleEraseMode}
+                    className="inline-flex items-center rounded-md bg-blue-500 px-3 py-2 text-sm font-medium text-white hover:bg-blue-600"
+                  >
+                    {eraseMode ? 'Draw' : 'Erase'}
+                  </button>
+                </div>
 
-        </div>
-        <div className="px-5">
+                <div>
+                  <label className="block text-sm mb-1">Stroke width</label>
+                  <input
+                    disabled={eraseMode}
+                    type="range"
+                    min="1"
+                    max="20"
+                    step="1"
+                    value={strokeWidth}
+                    onChange={handleStrokeWidthChange}
+                    className="w-full"
+                  />
+                </div>
 
-        <label htmlFor="color">Canvas color</label>
-        <input
-          type="color"
-          value={canvasColor}
-          onChange={handleCanvasColorChange}
-        />
-        </div>
-        <div className="px-5">
+                <div>
+                  <label className="block text-sm mb-1">Eraser width</label>
+                  <input
+                    disabled={!eraseMode}
+                    type="range"
+                    min="1"
+                    max="40"
+                    step="1"
+                    value={eraserWidth}
+                    onChange={handleEraserWidthChange}
+                    className="w-full"
+                  />
+                </div>
+              </div>
+            </div>
 
-                <button
-          type="button"
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          onClick={toggleEraseMode}
-        >
-          {eraseMode ? "Draw" : "Erase"}
-        </button>
-</div>
-      </div>
-      <div className="d-flex gap-2 align-items-center ">
-        
+            <div className="md:col-span-2">
+              <h2 className="text-2xl font-semibold mb-4">Canvas</h2>
 
-        <label htmlFor="strokeWidth" className="form-label">
-          Stroke width
-        </label>
-        <input
-          disabled={eraseMode}
-          type="range"
-          className="form-range"
-          min="1"
-          max="20"
-          step="1"
-          id="strokeWidth"
-          value={strokeWidth}
-          onChange={handleStrokeWidthChange}
-        />
-        <label htmlFor="eraserWidth" className="form-label">
-          Eraser width
-        </label>
-        <input
-          disabled={!eraseMode}
-          type="range"
-          className="form-range"
-          min="1"
-          max="40"
-          step="1"
-          id="eraserWidth"
-          value={eraserWidth}
-          onChange={handleEraserWidthChange}
-        />
-      </div>
-      <h1>Canvas</h1>
-      <ReactSketchCanvas
-        ref={canvasRef}
-        height={canvasHeight}
-        strokeWidth={strokeWidth}
-        eraserWidth={eraserWidth}
-        strokeColor={strokeColor}
-        canvasColor={canvasColor}
+              {/* Keep the canvas props and element exactly as before to preserve behavior */}
+              <div className="w-full bg-white rounded border border-border p-4 flex flex-col items-center">
+                <ReactSketchCanvas
+                  ref={canvasRef}
+                  height={canvasHeight}
+                  strokeWidth={strokeWidth}
+                  eraserWidth={eraserWidth}
+                  strokeColor={strokeColor}
+                  canvasColor={canvasColor}
+                />
 
-      />
-      <button
-        type="button"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        
-        onClick={() => canvasRef.current?.clearCanvas()}>
-          CLEAR
-      </button>
-      </CardContent>
-
-     </Card>
-
+                <div className="mt-4">
+                  <button
+                    type="button"
+                    onClick={() => canvasRef.current?.clearCanvas()}
+                    className="inline-flex items-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600"
+                  >
+                    CLEAR
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 }
