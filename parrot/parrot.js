@@ -114,21 +114,23 @@ function Parrot() {
                 <h1 className="text-2xl font-medium mb-5 text-blue-500">Game Rules</h1>
 
                 <p className="mb-3">
-                  In this game, each player receives 1 whiteboard and 1 marker. The game begins with one player as the judge 
-                  (chosen however you want). The judge takes a card from the stack and reads it to all players. Each card has a 
-                  prompt for all players to respond to. In some cases, the judge must also respond to the prompt. After all 
-                  players have something on their board, the judge reviews the responses and gives out points to players 
-                  according to the criteria below. Then, the player to the judge's left becomes the judge for the next round. 
-                  This continues until one player reaches 7 points (or whatever number the group wants to play to).
+                  Each player gets a whiteboard and a marker. At the start of the game one player acts as the judge (chosen however you like).
+                  The judge draws a card and reads the prompt to the group; some prompts also require the judge to submit an answer.
+                </p>
+
+                <p className="mb-3">
+                  When everyone has an entry on their board, the judge reviews submissions and awards points according to the rules below.
+                  The next judge is the player on the judge's left and the game continues until someone reaches the agreed target score (commonly 7).
                 </p>
 
                 <p className="mb-4">
-                  There are 5 prompt varieties in the game. They are marked with symbols on their faces to distinguish them.
-                  This allows for prompts of a certain type to be added or removed from the overall deck more easily. 
-                  Based on your group dynamic, you can customize the deck to include only the types of prompts you like. The
-                   rules for scoring the different prompt varieties are below. In the event of a tie, all tied players receive 
-                   a point. Most prompts are intentionally ambiguous. There is no right way to interpret these, and the final 
-                   points decision is made by the judge.
+                  The deck contains five prompt types, each marked with a symbol so you can include or remove types when building your card pile.
+                  This makes it easy to tailor the game to your group.
+                </p>
+
+                <p className="mb-4">
+                  Ties award a point to every tied player.  There is no single "right" answer to any open ended prompt
+                  and the judge can choose to interpret these prompts any way they like. Scoring details for each prompt type are listed below.
                 </p>
 
                 <div className="space-y-5">
