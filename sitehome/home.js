@@ -42,10 +42,10 @@ function Home() {
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
                 {/* Right 2/3: paragraph and details (show first on small screens) */}
                 <div className="md:col-span-2 order-1 md:order-2 text-lg text-muted-foreground">
-                  <h2 className="text-2xl font-medium mb-5 text-blue-500">Drawing Parrots</h2>
+                  <h2 className="text-2xl font-medium mb-5 text-blue-500">Parrot</h2>
 
                   <p className="text-lg leading-relaxed mb-5">
-                    Drawing Parrots is a party game where one player judges the responses of other players
+                    Parrot is a party game where one player judges the responses of other players
                     based on how well they match a given prompt. There are 5 prompt categories with prompts ranging from
                     drawing the coolest parrot to which player would make the best storybook villain. The game is
                     designed around allowing players to get creative with their answers using whiteboards and markers.

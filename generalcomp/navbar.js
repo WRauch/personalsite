@@ -5,9 +5,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Bird, Home, Info } from 'lucide-react';
 
 const navItems = [
-  { to: '/', label: 'Home', Icon: Home },
-  { to: '/parrot', label: 'Parrot', Icon: Bird },
-    // { to: '/about', label: 'About', Icon: Info },
+  { to: '/', label: 'Parrot', Icon: Bird },
+  { to: '/about', label: 'About', Icon: Info },
 
   // { to: '/testing', label: 'Testing', Icon: Info },
 

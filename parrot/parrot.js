@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import profilePic from '../images/Profile.jpg';
 import game2 from '../images/game2.jpg';
 import RuleType from './ruletype';
-import parrotDemo from '../images/parrotdemo.jpg';
+import qrCode from '../images/qr-code.png';
 import gameTotal from '../images/gametotal.jpg';
 
 function Parrot() {
@@ -26,11 +26,11 @@ function Parrot() {
             <div>
               <div className="h-full grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
                 <div className="md:col-span-2">
-                  <h1 className="text-3xl font-semibold mb-6 text-blue-500">Drawing Parrots</h1>
-                  <h3 className="text-xl font-medium mb-5 text-red-400">A game about drawing parrots ... and other things</h3>
+                  <h1 className="text-3xl font-semibold mb-6 text-blue-500">Parrot</h1>
+                  <h3 className="text-xl font-medium mb-5 text-red-400">A game about drawing parrots and mimicking your friends</h3>
 
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    Drawing Parrots is a party game where one player judges the responses of other players based on how well they match a given prompt. 
+                    Parrot is a party game where one player judges the responses of other players based on how well they match a given prompt. 
                     There are 5 prompt categories with prompts ranging from drawing the coolest parrot to which player would make the best storybook 
                     villain. The game is designed around allowing players to get creative with their answers using whiteboards and markers.
                     The complete ruleset for the game is below. Check it out and see if it sounds good to you.
@@ -73,17 +73,20 @@ function Parrot() {
                 </div>
 
                 <div className="md:col-span-1 flex items-center justify-center flex-col">
-                                      <p className="text-sm text-muted-foreground text-center mb-6">
-                      Contact: <a href="mailto:cardmarmot37@gmail.com" className="underline underline-offset-2">cardmarmot37@gmail.com</a>
-                    </p>
-                  <Image
-                    src={parrotDemo}
-                    alt="Parrot"
-                    width={220}
-                    height={220}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="rounded-md object-cover w-full max-w-[220px] mb-2"
-                  />
+
+                  <h2 className="text-lg font-medium mb-3 text-green-600">
+                    <a href="https://youtu.be/AzflXyeR_OE" className="underline underline-offset-2" target="_blank" rel="noopener noreferrer" aria-label="Open video demo in new tab">Video Demo</a>
+                  </h2>
+                  <a href="https://youtu.be/AzflXyeR_OE" target="_blank" rel="noopener noreferrer" aria-label="Open video demo in new tab">
+                    <Image
+                      src={qrCode}
+                      alt="Parrot QR code"
+                      width={220}
+                      height={220}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="rounded-md object-cover w-full max-w-[220px] mb-2"
+                    />
+                  </a>
                   <div className="mt-4 flex flex-col items-center gap-3">
 
 
@@ -97,12 +100,14 @@ function Parrot() {
 
                      <a
                       href="/parrot/order"
-                      className="inline-flex items-center rounded-md bg-red-400 px-4 py-2 text-sm font-medium text-white hover:bg-red-600"
+                      className="inline-flex items-center rounded-md bg-red-400 px-4 py-2 text-sm font-medium text-white hover:bg-red-600 mb-6"
                     >
                       Order (Coming Soon)
                     </a>
                   </div>
-
+                    <p className="text-sm text-muted-foreground text-center">
+                      Contact: <a href="mailto:cardmarmot37@gmail.com" className="underline underline-offset-2">cardmarmot37@gmail.com</a>
+                    </p>
                 </div>
               </div>
             </div>
@@ -113,25 +118,28 @@ function Parrot() {
               <div className="mt-4 text-lg text-muted-foreground">
                 <h1 className="text-2xl font-medium mb-5 text-blue-500">Game Rules</h1>
 
-                <p className="mb-3">
-                  Each player gets a whiteboard and a marker. At the start of the game one player acts as the judge (chosen however you like).
-                  The judge draws a card and reads the prompt to the group; some prompts also require the judge to submit an answer.
+                <h2 className="text-lg font-semibold mb-2 text-red-400">Game Setup:</h2>
+                <p className="mb-3">Each player receives: 1 Whiteboard, 1 Marker</p>
+
+                <p className="mb-3">Choose which of the 5 prompt types you would like to play with. You may use any combination of prompts from just 1 to all 5. 
+                  More details about the prompt types can be found in the "Prompt Types" section below.
                 </p>
 
-                <p className="mb-3">
-                  When everyone has an entry on their board, the judge reviews submissions and awards points according to the rules below.
-                  The next judge is the player on the judge's left and the game continues until someone reaches the agreed target score (commonly 7).
-                </p>
+                <h2 className="text-lg font-semibold mb-2 mt-4 text-red-400">Deck Setup:</h2>
+                <p className="mb-2 "><strong className='text-green-600'>Mode 1:</strong> Add all cards of the chosen types to the same deck and shuffle them together. It will be difficult to keep all the cards stacked in one pile, so making multiple shuffled piles is recommended.</p>
 
-                <p className="mb-4">
-                  The deck contains five prompt types, each marked with a symbol so you can include or remove types when building your card pile.
-                  This makes it easy to tailor the game to your group.
-                </p>
+                <p className="mb-3"><strong className='text-green-600'>Mode 2:</strong> Keep the cards of each type in separate shuffled piles. For each round of play, each judge draws a card from the same 
+                pile so that all players judge the same types of prompts each round. If your group really cares about
+                 competitive integrity, this is a fairer way to play.</p>
+ 
+                <h2 className="text-lg font-semibold mb-2 mt-4 text-red-400">Gameplay:</h2>
+                <p className="mb-3">One player begins the game as the judge and draws a card from the center pile, reading the card aloud to all players. After all players have an answer to the prompt, the judge awards points based on the type of prompt.</p>
 
-                <p className="mb-4">
-                  Ties award a point to every tied player.  There is no single "right" answer to any open ended prompt
-                  and the judge can choose to interpret these prompts any way they like. Scoring details for each prompt type are listed below.
-                </p>
+                <p className="mb-3">The player to the judge's left becomes the next judge and repeats the process. Play continues with each player becoming the judge in sequence until one player reaches 7 points. Based on your group's appetite, you can play to any number of points you would like.</p>
+
+                <p className="mb-3">Ties award a point to every tied player. There is no single "right" way to answer any prompt, and the judge can choose to interpret the prompts any way they like.</p>
+
+                <h2 className="text-lg font-semibold mb-2 text-red-400">Prompt Types:</h2>
 
                 <div className="space-y-5">
                   <RuleType
@@ -165,8 +173,7 @@ function Parrot() {
                     icon={
                       <div className="w-6 h-6 text-yellow-500 flex-shrink-0" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6">
-                          <circle cx="12" cy="7" r="4" />
-                          <path d="M4 21v-1a7 7 0 0 1 14 0v1" />
+                          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2" />
                         </svg>
                       </div>
                     }
@@ -188,15 +195,17 @@ function Parrot() {
                     }
                     title="(Scale of 1-5):"
                   >
-                    Each player, including the judge, must write a number from 1 to 5. All players matching the judge’s answer receive 1 point. A 1 should be assumed as not matching the prompt, and a 5 should be very closely matching the prompt. For example: How creative is the judge? A 5 is very creative, and a 1 is not very creative.
+                    Each player, including the judge, must write a number from 1 to 5. All players matching the judge’s answer receive 1 point. 
                   </RuleType>
 
                   <RuleType
                     icon={
-                      <div className="w-6 h-6 text-gray-600 flex-shrink-0" aria-hidden="true">
+                      <div className="w-6 h-6 text-white flex-shrink-0" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-6 h-6">
-                          <rect x="3" y="4" width="14" height="16" rx="2" />
-                          <path d="M7 8h6M7 12h6M7 16h4" />
+                          <circle cx="4" cy="6" r="1.5"  fill='currentColor'/>
+                          <circle cx="4" cy="12" r="1.5"  fill='currentColor'/>
+                          <circle cx="4" cy="18" r="1.5"  fill='currentColor'/>
+                          <path d="M8 6h12M8 12h12M8 18h12" />
                         </svg>
                       </div>
                     }
