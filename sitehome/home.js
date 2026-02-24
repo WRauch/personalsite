@@ -51,7 +51,7 @@ function Home() {
                     designed around allowing players to get creative with their answers using whiteboards and markers.
                   </p>
                   <p className="text-lg leading-relaxed">
-                    Check out more information on the <a href="/parrot" className="underline underline-offset-2">Parrot</a> page of the site!
+                    Check out more information on the <a href="/" className="underline underline-offset-2">Parrot</a> page of the site!
                   </p>
                 </div>
 
