@@ -6,6 +6,7 @@ import game2 from '../images/game2.jpg';
 import RuleType from './ruletype';
 import qrCode from '../images/qr-code.png';
 import gameTotal from '../images/gametotal.jpg';
+import parrotLogo from '../images/Parrot1.png';
 
 function Parrot() {
   const [lightbox, setLightbox] = useState(null); // { src, alt, rotated }
@@ -79,9 +80,9 @@ function Parrot() {
                   </h2>
                   <a href="https://youtu.be/AzflXyeR_OE" target="_blank" rel="noopener noreferrer" aria-label="Open video demo in new tab">
                     <Image
-                      src={qrCode}
+                      src={parrotLogo}
                       alt="Parrot QR code"
-                      width={220}
+                      width="100%"
                       height={220}
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="rounded-md object-cover w-full max-w-[220px] mb-2"
@@ -95,7 +96,7 @@ function Parrot() {
                       className="inline-flex items-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white hover:bg-blue-600 mb-2"
                       role="button"
                     >
-                      Try It (Coming Soon)
+                      Online Board
                     </a>
 
                      <a

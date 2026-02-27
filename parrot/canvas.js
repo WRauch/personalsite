@@ -14,8 +14,8 @@ export default function Canvas() {
 
 
   const [score, setScore] = useState(0);
-
-
+  const [canvasMode, setCanvasMode] = useState(false); 
+  const [textInput, setTextInput] = useState("Enter text");
 
   // responsive canvas height: scale down on smaller screens
   useEffect(() => {
@@ -46,6 +46,12 @@ export default function Canvas() {
     var cur = !eraseMode
     setEraseMode(cur);
     canvasRef.current?.eraseMode(cur);
+  };
+
+  const toggleCanvasMode = () => {
+    var test = !canvasMode
+    setCanvasMode(test);
+    canvasRef.current?.canvasMode(test);
   };
 
   const handleStrokeWidthChange = (e) => {
@@ -80,9 +86,6 @@ export default function Canvas() {
                       <input type="color" value={canvasColor} onChange={handleCanvasColorChange} />
                     </div>
                   </div>
-
-                
-
                     {!eraseMode ? (
                       <div>
 
@@ -115,10 +118,7 @@ export default function Canvas() {
 
                     )}
 
-
-
-
-                  <div>
+                 <div>
                     {/* Lock moved to the score area to reduce accidental scroll while drawing */}
                   </div>
                 </div>
@@ -129,6 +129,9 @@ export default function Canvas() {
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-semibold mb-4">Canvas</h2>
                 <div className="ml-4">
+
+                  {canvasMode ? null : ( 
+
                   <button
                     type="button"
                     onClick={toggleEraseMode}
@@ -136,15 +139,30 @@ export default function Canvas() {
                   >
                     {eraseMode ? 'Draw' : 'Erase'}
                   </button>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => { toggleCanvasMode(); setEraseMode(false); }}
+                    className="inline-flex items-center rounded-md bg-blue-500 px-3 py-2 text-sm font-medium text-white hover:bg-blue-600 ml-2"
+                  >
+                    {canvasMode ? 'Canvas' : 'Text'}
+                  </button>
                 </div>
               </div>
 
 
               {/* Keep the canvas props and element exactly as before to preserve behavior */}
+
               <div
                 className="w-full bg-white rounded border border-border p-4 flex flex-col items-center"
 
               >
+
+              {canvasMode ? (
+                <div className="w-full bg-white rounded border border-border p-4 flex items-center justify-center" style={{ height: canvasHeight }}>
+                  <input className="text-black text-center text-xl" value={textInput} style={{ fontSize: 88 }} onChange={(e) => setTextInput(e.target.value)}/>
+                </div>
+              ) : (
                 <ReactSketchCanvas
                   ref={canvasRef}
                   height={canvasHeight}
@@ -153,11 +171,12 @@ export default function Canvas() {
                   strokeColor={strokeColor}
                   canvasColor={canvasColor}
                 />
+                              )}
 
                 <div className="mt-4 flex items-center gap-4">
                   <button
                     type="button"
-                    onClick={() => canvasRef.current?.clearCanvas()}
+                    onClick={() => { canvasRef.current?.clearCanvas(); setTextInput("Enter text"); }}
                     className="inline-flex items-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-600"
                   >
                     CLEAR
@@ -188,7 +207,9 @@ export default function Canvas() {
 
                 </div>
               </div>
+
             </div>
+
 
           <div className="md:col-span-1 md:col-start-1 md:row-start-2">
             <h2 className="text-2xl font-semibold">Tips</h2>
@@ -197,7 +218,7 @@ export default function Canvas() {
               <li>Toggle between draw and erase modes with the button above the canvas.</li>
               <li>Adjust stroke and eraser widths with the sliders that appear based on the selected mode.</li>
               <li>Use the clear button to reset the canvas, and the score buttons to keep track of points.</li>
-              <li>For Drawing and Player Name prompts It is best to hold the device horizontally</li>
+              <li>If you prefer to write answers instead of draw the Text mode can be used</li>
             </ul>
           </div>
 
