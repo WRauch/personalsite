@@ -15,7 +15,7 @@ export default function Canvas() {
 
   const [score, setScore] = useState(0);
   const [canvasMode, setCanvasMode] = useState(false); 
-  const [textInput, setTextInput] = useState("Enter text");
+  const [textInput, setTextInput] = useState("Text");
 
   // responsive canvas height: scale down on smaller screens
   useEffect(() => {
@@ -51,7 +51,6 @@ export default function Canvas() {
   const toggleCanvasMode = () => {
     var test = !canvasMode
     setCanvasMode(test);
-    canvasRef.current?.canvasMode(test);
   };
 
   const handleStrokeWidthChange = (e) => {
@@ -160,7 +159,12 @@ export default function Canvas() {
 
               {canvasMode ? (
                 <div className="w-full bg-white rounded border border-border p-4 flex items-center justify-center" style={{ height: canvasHeight }}>
-                  <input className="text-black text-center text-xl" value={textInput} style={{ fontSize: 88 }} onChange={(e) => setTextInput(e.target.value)}/>
+                  <textarea 
+                    className="text-black text-center text-xl resize-none border-none bg-transparent w-full h-full" 
+                    value={textInput} 
+                    style={{ fontSize: 88, wordWrap: 'break-word', overflowWrap: 'break-word' }} 
+                    onChange={(e) => setTextInput(e.target.value)}
+                  />
                 </div>
               ) : (
                 <ReactSketchCanvas
@@ -176,7 +180,7 @@ export default function Canvas() {
                 <div className="mt-4 flex items-center gap-4">
                   <button
                     type="button"
-                    onClick={() => { canvasRef.current?.clearCanvas(); setTextInput("Enter text"); }}
+                    onClick={() => { canvasRef.current?.clearCanvas(); setTextInput("Text"); }}
                     className="inline-flex items-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-600"
                   >
                     CLEAR
