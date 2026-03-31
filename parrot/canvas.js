@@ -15,7 +15,7 @@ export default function Canvas() {
 
   const [score, setScore] = useState(0);
   const [canvasMode, setCanvasMode] = useState(false); 
-  const [textInput, setTextInput] = useState("Text");
+  const [textInput, setTextInput] = useState("");
 
   // responsive canvas height: scale down on smaller screens
   useEffect(() => {
@@ -162,7 +162,9 @@ export default function Canvas() {
                   <textarea 
                     className="text-black text-center text-xl resize-none border-none bg-transparent w-full h-full" 
                     value={textInput} 
-                    style={{ fontSize: 88, wordWrap: 'break-word', overflowWrap: 'break-word' }} 
+                    title="Enter text"
+                    placeholder="Enter text"
+                    style={{ fontSize: 60, wordWrap: 'break-word', overflowWrap: 'break-word' }} 
                     onChange={(e) => setTextInput(e.target.value)}
                   />
                 </div>
@@ -180,7 +182,7 @@ export default function Canvas() {
                 <div className="mt-4 flex items-center gap-4">
                   <button
                     type="button"
-                    onClick={() => { canvasRef.current?.clearCanvas(); setTextInput("Text"); }}
+                    onClick={() => { canvasRef.current?.clearCanvas(); setTextInput(""); }}
                     className="inline-flex items-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-600"
                   >
                     CLEAR
